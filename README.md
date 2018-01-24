@@ -32,5 +32,14 @@ python main.py
 In your web browser, enter the following address:
 
 ```
-http://IP_OR_HOSTNAME:8080
+http://locahost:8080
+```
+
+Use a Nginx as front-end:
+
+```
+apt-get install nginx -y
+rm /etc/nginx/sites-enabled/default
+cp nginx/helloworld.conf /etc/nginx/sites-enabled/
+/etc/init.d/nginx restart
 ```
